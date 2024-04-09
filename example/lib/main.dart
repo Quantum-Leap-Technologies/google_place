@@ -220,7 +220,7 @@ class _DetailsPageState extends State<DetailsPage> {
                           ),
                         ),
                       ),
-                      detailsResult != null && detailsResult.types != null
+                      detailsResult.types != null
                           ? Container(
                               margin: EdgeInsets.only(left: 15, top: 10),
                               height: 50,
@@ -251,8 +251,7 @@ class _DetailsPageState extends State<DetailsPage> {
                             child: Icon(Icons.location_on),
                           ),
                           title: Text(
-                            detailsResult != null &&
-                                    detailsResult.formattedAddress != null
+                            detailsResult.formattedAddress != null
                                 ? 'Address: ${detailsResult.formattedAddress}'
                                 : "Address: null",
                           ),
@@ -265,8 +264,7 @@ class _DetailsPageState extends State<DetailsPage> {
                             child: Icon(Icons.location_searching),
                           ),
                           title: Text(
-                            detailsResult != null &&
-                                    detailsResult.geometry != null &&
+                            detailsResult.geometry != null &&
                                     detailsResult.geometry.location != null
                                 ? 'Geometry: ${detailsResult.geometry.location.lat.toString()},${detailsResult.geometry.location.lng.toString()}'
                                 : "Geometry: null",
@@ -280,8 +278,7 @@ class _DetailsPageState extends State<DetailsPage> {
                             child: Icon(Icons.timelapse),
                           ),
                           title: Text(
-                            detailsResult != null &&
-                                    detailsResult.utcOffset != null
+                            detailsResult.utcOffset != null
                                 ? 'UTC offset: ${detailsResult.utcOffset.toString()} min'
                                 : "UTC offset: null",
                           ),
@@ -294,8 +291,7 @@ class _DetailsPageState extends State<DetailsPage> {
                             child: Icon(Icons.rate_review),
                           ),
                           title: Text(
-                            detailsResult != null &&
-                                    detailsResult.rating != null
+                            detailsResult.rating != null
                                 ? 'Rating: ${detailsResult.rating.toString()}'
                                 : "Rating: null",
                           ),
@@ -308,8 +304,7 @@ class _DetailsPageState extends State<DetailsPage> {
                             child: Icon(Icons.attach_money),
                           ),
                           title: Text(
-                            detailsResult != null &&
-                                    detailsResult.priceLevel != null
+                            detailsResult.priceLevel != null
                                 ? 'Price level: ${detailsResult.priceLevel.toString()}'
                                 : "Price level: null",
                           ),
